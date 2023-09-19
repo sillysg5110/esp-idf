@@ -1,0 +1,50 @@
+{
+      "terminal.integrated.profiles.windows": {
+        "PowerShell": {
+          "source": "PowerShell",
+          //"path": "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+          "args": []
+        }
+      },
+      "terminal.integrated.defaultProfile.windows": "PowerShell",
+
+    "terminal.integrated.env.windows":{
+      // "PATH":"${env:PATH};C:\\windows\\system32;D:\\ENV_ESP32\\python_env\\idf5.1_py3.11_env\\Scripts;D:\\ENV_ESP32\\tools\\idf-git\\2.39.2\\cmd;" //D:\\ENV_ESP32\\tools\\xtensa-esp-elf-gdb\\12.1_20221002\\xtensa-esp-elf-gdb\\bin;D:\\ENV_ESP32\\tools\\riscv32-esp-elf-gdb\\12.1_20221002\\riscv32-esp-elf-gdb\\bin;D:\\ENV_ESP32\\tools\\xtensa-esp32-elf\\esp-12.2.0_20230208\\xtensa-esp32-elf\\bin;D:\\ENV_ESP32\\tools\\xtensa-esp32s2-elf\\esp-12.2.0_20230208\\xtensa-esp32s2-elf\\bin;D:\\ENV_ESP32\\tools\\xtensa-esp32s3-elf\\esp-12.2.0_20230208\\xtensa-esp32s3-elf\\bin;D:\\ENV_ESP32\\tools\\riscv32-esp-elf\\esp-12.2.0_20230208\\riscv32-esp-elf\\bin;D:\\ENV_ESP32\\tools\\esp32ulp-elf\\2.35_20220830\\esp32ulp-elf\\bin;D:\\ENV_ESP32\\tools\\cmake\\3.24.0\\bin;D:\\ENV_ESP32\\tools\\openocd-esp32\\v0.12.0-esp32-20230419\\openocd-esp32\\bin;D:\\ENV_ESP32\\tools\\ninja\\1.10.2;D:\\ENV_ESP32\\tools\\idf-exe\\1.0.3;D:\\ENV_ESP32\\tools\\ccache\\4.8\\ccache-4.8-windows-x86_64;D:\\ENV_ESP32\\tools\\dfu-util\\0.11\\dfu-util-0.11-win64;D:\\ENV_ESP32\\tools\\esp-rom-elfs\\20230320",
+      "PATH":"D:\\ENV_ESP32\\python_env\\idf5.1_py3.11_env\\Scripts;D:\\ENV_ESP32\\tools\\idf-git\\2.39.2\\cmd;D:\\ENV_ESP32\\tools\\xtensa-esp-elf-gdb\\12.1_20221002\\xtensa-esp-elf-gdb\\bin;D:\\ENV_ESP32\\tools\\riscv32-esp-elf-gdb\\12.1_20221002\\riscv32-esp-elf-gdb\\bin;D:\\ENV_ESP32\\tools\\xtensa-esp32-elf\\esp-12.2.0_20230208\\xtensa-esp32-elf\\bin;D:\\ENV_ESP32\\tools\\xtensa-esp32s2-elf\\esp-12.2.0_20230208\\xtensa-esp32s2-elf\\bin;D:\\ENV_ESP32\\tools\\xtensa-esp32s3-elf\\esp-12.2.0_20230208\\xtensa-esp32s3-elf\\bin;D:\\ENV_ESP32\\tools\\riscv32-esp-elf\\esp-12.2.0_20230208\\riscv32-esp-elf\\bin;D:\\ENV_ESP32\\tools\\esp32ulp-elf\\2.35_20220830\\esp32ulp-elf\\bin;D:\\ENV_ESP32\\tools\\cmake\\3.24.0\\bin;D:\\ENV_ESP32\\tools\\openocd-esp32\\v0.12.0-esp32-20230419\\openocd-esp32\\bin;D:\\ENV_ESP32\\tools\\ninja\\1.10.2;D:\\ENV_ESP32\\tools\\idf-exe\\1.0.3;D:\\ENV_ESP32\\tools\\ccache\\4.8\\ccache-4.8-windows-x86_64;D:\\ENV_ESP32\\tools\\dfu-util\\0.11\\dfu-util-0.11-win64;D:\\ENV_ESP32\\tools\\esp-rom-elfs\\20230320",
+      "IDF_TOOLS_PATH":"D:\\ENV_ESP32",
+      "IDF_PATH":"E:\\ESP32\\esp-idf",
+    },
+
+    "workbench.colorCustomizations": {
+        "terminal.background": "#181818",
+        "terminal.foreground": "#4a6d50",
+        "terminalCursor.background": "#D8D8D8",
+        "terminalCursor.foreground": "#D8D8D8",
+        "terminal.ansiBlack": "#181818",
+        "terminal.ansiBlue": "#7CAFC2",
+        "terminal.ansiBrightBlack": "#585858",
+        "terminal.ansiBrightBlue": "#7CAFC2",
+        "terminal.ansiBrightCyan": "#86C1B9",
+        "terminal.ansiBrightGreen": "#A1B56C",
+        "terminal.ansiBrightMagenta": "#BA8BAF",
+        "terminal.ansiBrightRed": "#AB4642",
+        "terminal.ansiBrightWhite": "#F8F8F8",
+        "terminal.ansiBrightYellow": "#F7CA88",
+        "terminal.ansiCyan": "#86C1B9",
+        "terminal.ansiGreen": "#A1B56C",
+        "terminal.ansiMagenta": "#BA8BAF",
+        "terminal.ansiRed": "#AB4642",
+        "terminal.ansiWhite": "#D8D8D8",
+        "terminal.ansiYellow": "#F7CA88",
+        "terminal.integrated.cursorBlinking": true,
+        "terminal.integrated.lineHeight": 1.6,
+        "terminal.integrated.letterSpacing": 0.1,
+        "terminal.integrated.fontSize": 30, //字体大小设置
+        "terminal.integrated.fontFamily": "Lucida Console", //字体设置
+    },
+    "cygwin32.root": "",
+    "cygwin64.root": "",
+    "mingw32.provider": "",
+    "mingw64.provider": "",
+    "msys2.root": "",
+}

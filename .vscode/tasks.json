@@ -1,0 +1,193 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "options": {
+        // 这里指定tasks 的运行目录，默认是${workspaceRoot}
+        "cwd": "${workspaceRoot}/../example/blink"
+    },
+    "tasks": [
+        {
+            "label": "Build - Build project",
+            "type": "shell",
+            "command": "idf.py build",
+            // "windows": {
+            //     "command": "idf.py build",
+            //     "options": {
+            //         "env": {
+            //             "PATH": "${env:PATH};${config:idf.customExtraPaths}"
+            //         }
+            //     }
+            // },
+            // "options": {
+            //     "env": {
+            //         "PATH": "${env:PATH}:${config:idf.customExtraPaths}"
+            //     }
+            // },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}"
+                    ],
+                    "pattern": {
+                        "regexp": "^\\.\\.(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                },
+                {
+                    "owner": "cpp",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^[^\\.](.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "dependsOn":["Set ESP-IDF Target"]
+        },
+        {
+            "label": "Set ESP-IDF Target",
+            "type": "shell",
+            "command": "idf.py set-target esp32c2",
+            "args": [
+            ],
+            "problemMatcher": [
+                "$gcc"
+            ],
+            // "options": {
+            //     // 这里指定tasks 的运行目录，默认是${workspaceRoot}
+            //     "cwd": "${workspaceRoot}/examples/get-started/hello_world"
+            // },
+        },
+        {
+            "label": "Clean - Clean the project",
+            "type": "shell",
+            "command": "idf.py fullclean",
+            // "options": {
+            //     // 这里指定tasks 的运行目录，默认是${workspaceRoot}
+            //     "cwd": "${workspaceRoot}/examples/get-started/hello_world"
+            // },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}"
+                    ],
+                    "pattern": {
+                        "regexp": "^\\.\\.(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                },
+                {
+                    "owner": "cpp",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^[^\\.](.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ]
+        },
+        {
+            "label": "Flash - Flash the device",
+            "type": "shell",
+            "command": "idf.py -p COM37 -b 921600 flash",
+            // "options": {
+            //     // 这里指定tasks 的运行目录，默认是${workspaceRoot}
+            //     "cwd": "${workspaceRoot}/examples/get-started/hello_world"
+            // },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}"
+                    ],
+                    "pattern": {
+                        "regexp": "^\\.\\.(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                },
+                {
+                    "owner": "cpp",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^[^\\.](.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ],
+            "dependsOn":["Build - Build project"]
+        },
+        {
+            "label": "Monitor - Start the monitor",
+            "type": "shell",
+            "command": "idf.py -p COM37 -b 74880 monitor",
+            // "options": {
+            //     // 这里指定tasks 的运行目录，默认是${workspaceRoot}
+            //     "cwd": "${workspaceRoot}/examples/get-started/hello_world"
+            // },
+            "problemMatcher": [
+                {
+                    "owner": "cpp",
+                    "fileLocation": [
+                        "relative",
+                        "${workspaceFolder}"
+                    ],
+                    "pattern": {
+                        "regexp": "^\\.\\.(.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                },
+                {
+                    "owner": "cpp",
+                    "fileLocation": "absolute",
+                    "pattern": {
+                        "regexp": "^[^\\.](.*):(\\d+):(\\d+):\\s+(warning|error):\\s+(.*)$",
+                        "file": 1,
+                        "line": 2,
+                        "column": 3,
+                        "severity": 4,
+                        "message": 5
+                    }
+                }
+            ],
+            "dependsOn":["Flash - Flash the device"]
+        },
+    ]
+}
